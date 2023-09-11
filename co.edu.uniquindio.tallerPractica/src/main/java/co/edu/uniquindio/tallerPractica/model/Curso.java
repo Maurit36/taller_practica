@@ -117,4 +117,17 @@ public class Curso {
 
         return promedioCurso;
     }
+
+
+    public Curso(String nombre, int semestre, String grupo, int creditos, String jornada, Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3, Docente docente) {
+        this.nombre = nombre;
+        this.semestre = semestre;
+        this.grupo = grupo;
+        this.creditos = creditos;
+        this.jornada = jornada;
+        this.estudiante1 = estudiante1;
+        this.estudiante2 = estudiante2;
+        this.estudiante3 = estudiante3;
+        this.docente = docente;
+    }
 }
