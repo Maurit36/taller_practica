@@ -1,8 +1,5 @@
 package co.edu.uniquindio.tallerPractica.model;
 
-import co.edu.uniquindio.tallerPractica.model.Atraccion;
-import co.edu.uniquindio.tallerPractica.model.Visitante;
-
 public class PruebaMain2 {
     public static void main(String[] args) {
 

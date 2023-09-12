@@ -4,7 +4,7 @@ import co.edu.uniquindio.tallerPractica.model.Curso;
 import co.edu.uniquindio.tallerPractica.model.Docente;
 import co.edu.uniquindio.tallerPractica.model.Estudiante;
 
-public class MainEjercicio1{
+public class MainEjercicio1 {
     public static void main(String[] args) {
         Curso curso = inicializaDatosPrueba();
         curso.mostrarInformacionEstudiantes();
