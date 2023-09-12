@@ -13,12 +13,17 @@ public class Curso {
     private Docente docente;
 
 
-    public Curso(String nombre, int semestre, String grupo, int creditos, String jornada) {
+    public Curso(String nombre, int semestre, String grupo, int creditos, String jornada,
+                 Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3, Docente docente) {
         this.nombre = nombre;
         this.semestre = semestre;
         this.grupo = grupo;
         this.creditos = creditos;
         this.jornada = jornada;
+        this.estudiante1 = estudiante1;
+        this.estudiante2 = estudiante2;
+        this.estudiante3 = estudiante3;
+        this.docente = docente;
     }
 
     public String getNombre() {
@@ -93,9 +98,6 @@ public class Curso {
         this.docente = docente;
     }
 
-    /**
-     * Metodo para mostrar la informacion de los estudiantes del curso
-     */
     public void mostrarInformacionEstudiantes() {
         String informacionEstudiante1 = getEstudiante1().obtenerInformacion();
         String informacionEstudiante2 = getEstudiante2().obtenerInformacion();
@@ -106,28 +108,15 @@ public class Curso {
     }
 
     public double obtenerPromedioCurso(){
-        double promedioEstuadiante1 = 0.0;
-        double promedioEstuadiante2 = 0.0;
-        double promedioEstuadiante3 = 0.0;
+        double promedioEstudiante1 = 0.0;
+        double promedioEstudiante2 = 0.0;
+        double promedioEstudiante3 = 0.0;
         double promedioCurso = 0.0;
-        promedioEstuadiante1 = getEstudiante1().calcularPromedio();
-        promedioEstuadiante2 = getEstudiante2().calcularPromedio();
-        promedioEstuadiante3 = getEstudiante3().calcularPromedio();
-        promedioCurso = (promedioEstuadiante1+promedioEstuadiante2+promedioEstuadiante3)/3;
-
+        promedioEstudiante1 = getEstudiante1().calcularPromedio();
+        promedioEstudiante2 = getEstudiante2().calcularPromedio();
+        promedioEstudiante3 = getEstudiante3().calcularPromedio();
+        promedioCurso = (promedioEstudiante1+promedioEstudiante2+promedioEstudiante3)/3;
+        System.out.println("El promedio del curso es : " + promedioCurso);
         return promedioCurso;
-    }
-
-
-    public Curso(String nombre, int semestre, String grupo, int creditos, String jornada, Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3, Docente docente) {
-        this.nombre = nombre;
-        this.semestre = semestre;
-        this.grupo = grupo;
-        this.creditos = creditos;
-        this.jornada = jornada;
-        this.estudiante1 = estudiante1;
-        this.estudiante2 = estudiante2;
-        this.estudiante3 = estudiante3;
-        this.docente = docente;
     }
 }
